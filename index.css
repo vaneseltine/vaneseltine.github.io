@@ -1,23 +1,29 @@
+:root {
+    --main-bg: #ededf5;
+    --main-fg: #666666;
+    --heading: #1983ad;
+    --accent: #1983ad;
+}
+
 html {
     font-size: 28px;
     font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
-    background-color: #ededf5;
+    background-color: var(--main-bg);
     min-height: 100%;
     position: relative;
 }
 
 body {
-    color: #525252;
+    color: var(--main-fg);
     font-weight: 300;
     line-height: 1.4rem;
     margin: 0 0 100px 0;
-    /* bottom for footer height */
     padding: 0 3rem 0 1.5rem;
 }
 
 .heading {
-    color: #1983ad;
-    font-family: "Google Sans", Roboto, RobotoDraft, Helvetica, Arial, sans-serif;
+    color: var(--heading);
+    font-family: Roboto, Helvetica, Arial, sans-serif;
 }
 
 h1 {
@@ -34,7 +40,7 @@ h2 {
 }
 
 a {
-    border-bottom: 2px solid #ededf5;
+    border-bottom: 2px solid var(--main-bg);
     transition: border-bottom 3s;
     transition-timing-function: ease-out;
     color: inherit;
@@ -44,11 +50,11 @@ a {
 
 
 a:hover {
-    border-bottom: 2px solid #1983ad;
+    border-bottom: 2px solid var(--accent);
 }
 
 .dimaccent {
-    color: #1983ad;
+    color: var(--accent);
 }
 
 .blob {
