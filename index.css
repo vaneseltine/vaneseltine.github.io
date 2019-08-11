@@ -78,12 +78,8 @@ a:hover {
     text-align: justify;
 }
 
-.quoted:before {
-    content: "\201C"
-}
-
-.quoted:after {
-    content: "\201D"
+.writing {
+    text-align: left;
 }
 
 .sitelist {
