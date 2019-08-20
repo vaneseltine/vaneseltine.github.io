@@ -3,11 +3,12 @@
     --main-fg: #666666;
     --heading: #1983ad;
     --accent: #1983ad;
+    --font-stack: "Helvetica Neue", HelveticaNeue, "TeX Gyre Heros", TeXGyreHeros, "Liberation Sans", "Nimbus Sans L", FreeSans, Arimo, Helvetica, Arial, sans-serif;
 }
 
 html {
     font-size: 28px;
-    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+    font-family: var(--font-stack);
     background-color: var(--main-bg);
     min-height: 100%;
     position: relative;
@@ -15,7 +16,6 @@ html {
 
 body {
     color: var(--main-fg);
-    font-weight: 300;
     line-height: 1.4rem;
     margin: 0 0 100px 0;
     padding: 0 3rem 0 1.5rem;
@@ -23,12 +23,11 @@ body {
 
 .heading {
     color: var(--heading);
-    font-family: Roboto, Helvetica, Arial, sans-serif;
+    font-family: inherit;
 }
 
 h1 {
     font-size: 1.5rem;
-    font-weight: 500;
     letter-spacing: 0.08rem;
     padding: 0.5rem 0 0 0;
 }
@@ -36,7 +35,7 @@ h1 {
 h2 {
     font-size: 1rem;
     font-weight: normal;
-    letter-spacing: 0.04rem;
+    letter-spacing: 0.06rem;
 }
 
 a {
@@ -48,13 +47,8 @@ a {
     user-select: none;
 }
 
-
 a:hover {
     border-bottom: 2px solid var(--accent);
-}
-
-.dimaccent {
-    color: var(--accent);
 }
 
 .blob {
@@ -64,7 +58,6 @@ a:hover {
 
 .feets {
     left: 0;
-    bottom: 0;
     height: 70px;
     position: absolute;
     text-align: center;
@@ -79,10 +72,21 @@ a:hover {
 }
 
 .writing {
-    text-align: left;
+    hyphens: auto;
+    text-align: justify;
 }
 
-.sitelist {
+#sitelist {
+    color: var(--accent);
     font-family: monospace;
     font-size: .75rem;
+}
+
+#sitelist ul {
+    list-style: none;
+}
+
+#sitelist li {
+    display: inline;
+    margin-right: 0.5rem;
 }
